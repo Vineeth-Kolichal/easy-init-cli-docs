@@ -4,10 +4,25 @@
  */
 
 .heroBanner {
-  padding: 4rem 0;
+  padding: 6rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(135deg, var(--ifm-color-primary-dark) 0%, var(--ifm-color-primary-darkest) 100%);
+  color: #fff;
+}
+
+.hero__title {
+  font-weight: 800;
+  font-size: 3.5rem;
+  margin-bottom: 24px;
+}
+
+.hero__subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 32px;
+  opacity: 0.9;
 }
 
 @media screen and (max-width: 996px) {

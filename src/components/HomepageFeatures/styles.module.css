@@ -1,11 +1,41 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
+  padding: 4rem 0;
   width: 100%;
 }
+
+/* We need to target the individual feature columns to make them look like cards.
+   Since the markup structure is handled in JS (using col--4), we can assume 
+   the children of the row in index.js are the features. 
+   However, styling the module directly is safer if we wrap the Feature content.
+   Let's check index.js structure first. Ideally we add a class to the div inside Col. */
 
 .featureSvg {
   height: 200px;
   width: 200px;
+}
+
+.featureCard {
+  background: var(--ifm-card-background-color);
+  border-radius: 12px;
+  padding: 2rem;
+  height: 100%;
+  transition: all 0.2s ease-in-out;
+  border: 1px solid transparent;
+}
+
+[data-theme='light'] .featureCard {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='dark'] .featureCard {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.featureCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  border-color: var(--ifm-color-primary);
 }
