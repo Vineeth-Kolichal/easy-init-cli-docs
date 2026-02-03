@@ -1,0 +1,8 @@
+{
+    "label": "Architectures",
+    "position": 4,
+    "link": {
+        "type": "generated-index",
+        "description": "Supported architecture patterns in easy_init_cli."
+    }
+}
