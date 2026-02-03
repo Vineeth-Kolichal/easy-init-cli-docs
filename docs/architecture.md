@@ -2,9 +2,11 @@
 sidebar_position: 4
 ---
 
-# Architecture
+# Clean Architecture
 
-`easy_init_cli` implements **TDD + Clean Architecture**, separating code into three main layers: **Data**, **Domain**, and **Presentation**. This ensures independence, scalability, and testability.
+> **Note**: Clean Architecture is the currently supported pattern. More architectures will be added in the future.
+
+`easy_init_cli` implements **Clean Architecture**, separating code into three main layers: **Data**, **Domain**, and **Presentation**. This ensures independence, scalability, and testability.
 
 ## Project Structure
 

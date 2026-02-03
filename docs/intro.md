@@ -6,7 +6,9 @@ sidebar_position: 1
 
 **Easy Init CLI** is a powerful command-line tool designed to streamline the initialization of Flutter projects. It automatically sets up your project with a well-structured, scalable, and testable architecture, saving you time on boilerplate setup.
 
-Currently, it supports **TDD + Clean Architecture**, a robust pattern favored by many professional Flutter developers for its separation of concerns and testability.
+Currently, it supports **Clean Architecture**, a robust pattern favored by many professional Flutter developers. 
+
+> **Note**: We are actively planning to support more architecture patterns in future releases.
 
 ## ✨ Key Features
 

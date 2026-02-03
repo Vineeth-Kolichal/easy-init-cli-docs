@@ -18,8 +18,8 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Built on industry-standard <code>TDD + Clean Architecture</code> principles.
-        Ensures your codebase is scalable, testable, and maintainable.
+        Primary focus on <code>Clean Architecture</code>.
+        Future updates will support additional architecture patterns and project structures.
       </>
     ),
   },

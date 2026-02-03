@@ -25,7 +25,10 @@ cd <your_project_name>
 easy init
 ```
 
-You will be prompted to select an architecture. Currently, **TDD + Clean Architecture** is the supported pattern.
+You will be prompted to select an architecture. 
+
+- **Clean Architecture** (Current)
+- *More patterns coming soon...*
 
 ## Create a Feature
 

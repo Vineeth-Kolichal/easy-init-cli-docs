@@ -11,7 +11,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Easy Init CLI',
-  tagline: 'Setup Flutter projects with TDD + Clean Architecture instantly.',
+  tagline: 'Setup Flutter projects instantly. Currently supports Clean Architecture.',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
