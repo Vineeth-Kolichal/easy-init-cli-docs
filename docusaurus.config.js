@@ -27,7 +27,7 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'ashavijit', // Usually your GitHub org/user name.
+  organizationName: 'Vineeth-Kolichal', // Usually your GitHub org/user name.
   projectName: 'easy_init_cli', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -49,7 +49,7 @@ const config = {
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          // editUrl: 'https://github.com/ashavijit/easy_init_cli/', 
+          editUrl: 'https://github.com/Vineeth-Kolichal/easy_init_cli/tree/main/',
           routeBasePath: '/', // Serve docs at root like bloclibrary.dev? No, bloclibrary has /getting-started/ etc.
           // Let's keep /docs for now or maybe better to just use /docs
         },
@@ -90,7 +90,7 @@ const config = {
             position: 'right',
           },
           {
-            href: 'https://github.com/ashavijit/easycli',
+            href: 'https://github.com/Vineeth-Kolichal/easy_init_cli',
             label: 'GitHub',
             position: 'right',
           },
@@ -124,7 +124,7 @@ const config = {
             items: [
               {
                 label: 'Report Issues',
-                href: 'https://github.com/ashavijit/easycli/issues',
+                href: 'https://github.com/Vineeth-Kolichal/easy_init_cli/issues',
               },
             ],
           },
@@ -133,7 +133,7 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/ashavijit/easycli',
+                href: 'https://github.com/Vineeth-Kolichal/easy_init_cli',
               },
             ],
           },
