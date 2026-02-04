@@ -4,15 +4,15 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Easy Init CLI',
-  tagline: 'Setup Flutter projects instantly. Currently supports Clean Architecture.',
-  favicon: 'img/favicon.ico',
+  tagline: 'The ultimate tool for setting up Flutter projects instantly. Automate boilerplate generation and start coding features immediately.',
+  favicon: 'img/favicon.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -27,7 +27,7 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'ashavijit', // Usually your GitHub org/user name.
+  organizationName: 'Vineeth-Kolichal', // Usually your GitHub org/user name.
   projectName: 'easy_init_cli', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -49,7 +49,7 @@ const config = {
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          // editUrl: 'https://github.com/ashavijit/easy_init_cli/', 
+          editUrl: 'https://github.com/Vineeth-Kolichal/easy_init_cli/tree/main/',
           routeBasePath: '/', // Serve docs at root like bloclibrary.dev? No, bloclibrary has /getting-started/ etc.
           // Let's keep /docs for now or maybe better to just use /docs
         },
@@ -64,17 +64,18 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata: [
+        { name: 'keywords', content: 'flutter, cli, easy-init, clean-architecture, scaffolding, dart, clean-code, tdd, solid-principles' },
+        { name: 'description', content: 'Easy Init CLI: The ultimate tool for setting up Flutter projects with Clean Architecture instantly. Automate boilerplate generation and start coding features immediately.' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+      ],
       // Replace with your project's social card
-      // image: 'img/docusaurus-social-card.jpg',
+      image: 'img/logo.png',
       colorMode: {
         respectPrefersColorScheme: true,
       },
       navbar: {
         title: 'Easy Init CLI',
-        logo: {
-          alt: 'Easy Init CLI Logo',
-          src: 'img/logo.svg',
-        },
         items: [
           {
             type: 'docSidebar',
@@ -89,7 +90,7 @@ const config = {
             position: 'right',
           },
           {
-            href: 'https://github.com/ashavijit/easycli',
+            href: 'https://github.com/Vineeth-Kolichal/easy_init_cli',
             label: 'GitHub',
             position: 'right',
           },
@@ -97,6 +98,13 @@ const config = {
       },
       footer: {
         style: 'dark',
+        logo: {
+          alt: 'Flutter Logo',
+          src: 'img/flutter_logo.png',
+          href: 'https://flutter.dev',
+          width: 50,
+          height: 50,
+        },
         links: [
           {
             title: 'Docs',
@@ -116,7 +124,7 @@ const config = {
             items: [
               {
                 label: 'Report Issues',
-                href: 'https://github.com/ashavijit/easycli/issues',
+                href: 'https://github.com/Vineeth-Kolichal/easy_init_cli/issues',
               },
             ],
           },
@@ -125,7 +133,7 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/ashavijit/easycli',
+                href: 'https://github.com/Vineeth-Kolichal/easy_init_cli',
               },
             ],
           },
