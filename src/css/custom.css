@@ -54,12 +54,28 @@
 }
 
 /* Navbar */
+/* Navbar */
+/* Navbar */
+:root {
+  --ifm-navbar-height: 80px;
+}
+
 .navbar {
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
+.navbar__brand {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
 /* Typography headers */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
   letter-spacing: -0.02em;
 }

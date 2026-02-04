@@ -12,6 +12,21 @@
   color: #fff;
 }
 
+.heroBanner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/img/flutter_logo.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20%;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
 .hero__title {
   font-weight: 800;
   font-size: 3.5rem;
