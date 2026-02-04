@@ -56,17 +56,9 @@
 /* Navbar */
 /* Navbar */
 /* Navbar */
-:root {
-  --ifm-navbar-height: 80px;
-}
-
+/* Navbar */
 .navbar {
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-}
-
-.navbar__brand {
-  padding-top: 5px;
-  padding-bottom: 5px;
 }
 
 /* Typography headers */

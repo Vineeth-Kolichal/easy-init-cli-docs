@@ -12,19 +12,19 @@
   color: #fff;
 }
 
-.heroBanner::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url('/img/flutter_logo.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 20%;
-  opacity: 0.05;
-  pointer-events: none;
+.heroLogo {
+  max-width: 250px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 24px;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
+}
+
+.heroLogoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .hero__title {

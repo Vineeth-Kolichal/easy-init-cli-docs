@@ -75,12 +75,7 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: '',
-        logo: {
-          alt: 'Easy Init CLI Logo',
-          src: 'img/logo.png',
-          height: 60,
-        },
+        title: 'Easy Init CLI',
         items: [
           {
             type: 'docSidebar',
