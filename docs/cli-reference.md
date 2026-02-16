@@ -27,7 +27,8 @@ easy init
 
 You will be prompted to select an architecture. 
 
-- **Clean Architecture** (Current)
+- **Clean Architecture**
+- **MVVM**
 - *More patterns coming soon...*
 
 ## Create a Feature
