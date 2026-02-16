@@ -28,29 +28,31 @@ lib/
 ├── main.dart                    # Application entry point
 ├── common/                      # Reusable components, utilities, and shared logic across features
 │   ├── ui_utils/                # Common UI utilities (e.g., SnackBars)
-│   └── widgets/                 # Common UI components
+│   └── widgets/                 # Common UI components (GenericButton, CustomTextField, Loading, etc.)
 ├── core/                        # Core functionalities, infrastructure, and cross-cutting concerns
 │   ├── api_endpoints/           # API endpoint definitions
-│   ├── config/                  # Application configuration
-│   ├── dependency_injection/    # Dependency injection setup
-│   ├── extensions/              # Dart extensions
+│   ├── config/                  # Application configuration (FlavorConfig)
+│   ├── dependency_injection/    # Dependency injection setup (GetIt, Injectable)
+│   │   ├── config/              # DI configuration files
+│   │   └── modules/             # DI modules (e.g., DioModule)
+│   ├── extensions/              # Dart extensions (String, Date, Number, Theme, Navigation)
 │   ├── failures/                # Custom failure classes for error handling
-│   ├── network/                 # Network client and handling
-│   ├── routes/                  # Application routing definitions
-│   ├── services/                # Core services
-│   └── theme/                   # Application theme and colors
-└── features/                    # Feature-specific modules, each following clean architecture
+│   ├── network/                 # Network client and handling (Dio configuration)
+│   ├── routes/                  # Application routing definitions (AutoRoute)
+│   ├── services/                # Core services (empty for now)
+│   └── theme/                   # Application theme and styling
+│       ├── typography/          # Typography system (TextStyles, FontWeights)
+│       ├── app_colors.dart      # Color palette definitions
+│       ├── app_theme.dart       # Theme configuration
+│       └── theme_service.dart   # Theme management service
+└── features/                    # Feature-specific modules, each following MVVM architecture
     └── <feature_name>/
-        ├── data/                # Data layer (repositories implementation, data sources, models)
+        ├── data/                # Data layer (repositories implementation, data sources)
         │   ├── data_sources/    # Remote and local data sources
-        │   ├── models/          # Data transfer objects (DTOs)
-        │   └── repositories_impl/# Repository implementations
-        ├── domain/              # Domain layer (entities, repository interfaces, use cases)
-        │   ├── entities/        # Core business entities
-        │   ├── repositories/    # Repository interfaces
-        │   └── usecases/        # Business logic (use cases)
-        └── presentation/        # Presentation layer (UI, blocs, widgets)
-            ├── blocs/           # BLoC for state management
+        │   └── repositories/    # Repository implementations
+        ├── models/              # Data models (DTOs, domain models)
+        ├── view_model/          # ViewModels for state management (using ChangeNotifier or similar)
+        └── view/                # View layer (UI components)
             ├── screens/         # Screens/Pages
             └── widgets/         # UI components specific to the feature
 ```
