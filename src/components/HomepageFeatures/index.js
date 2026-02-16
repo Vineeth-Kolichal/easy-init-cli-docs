@@ -4,47 +4,77 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Automated Project Setup',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: '🏗️ Multiple Architecture Support',
+    icon: '🏗️',
+    description: (
+      <>
+        Choose between <strong>Clean Architecture</strong> with BLoC or <strong>MVVM</strong> with Provider.
+        More architecture patterns coming soon to fit your project needs.
+      </>
+    ),
+  },
+  {
+    title: '⚡ Automated Project Setup',
+    icon: '⚡',
     description: (
       <>
         Instantly generate a complete, production-ready project structure with a single command.
-        Say goodbye to manual boilerplate setup.
+        Say goodbye to manual boilerplate setup and start building immediately.
       </>
     ),
   },
   {
-    title: 'Clean Architecture',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: '📦 Smart Package Management',
+    icon: '📦',
     description: (
       <>
-        Primary focus on <code>Clean Architecture</code>.
-        Future updates will support additional architecture patterns and project structures.
+        Pre-configured with essential packages: <code>dio</code>, <code>get_it</code>, <code>freezed</code>,
+        <code>flutter_bloc</code>/<code>provider</code>, and more. Dependencies ready out of the box.
       </>
     ),
   },
   {
-    title: 'Feature Generation',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: '🎯 Feature-Wise Separation',
+    icon: '🎯',
     description: (
       <>
-        Easily add new feature modules with dependencies pre-configured.
-        Supports automatic generation of Authentication features.
+        Organize code by features, not layers. Each feature is self-contained with its own
+        data, domain/models, and presentation layers for maximum modularity.
+      </>
+    ),
+  },
+  {
+    title: '🎨 AI-Powered Development',
+    icon: '🎨',
+    description: (
+      <>
+        Includes <code>/ai_docs</code> folder with styling and API flow guides for consistent
+        AI-assisted development. Perfect for vibe coding with your favorite AI tools.
+      </>
+    ),
+  },
+  {
+    title: '🧪 Test-Ready Infrastructure',
+    icon: '🧪',
+    description: (
+      <>
+        Built-in testing setup with <code>mocktail</code> for mocking and clear separation
+        of concerns. Write unit tests easily with pre-configured test infrastructure.
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({icon, title, description}) {
   return (
     <div className={clsx('col col--4')}>
       <div className={styles.featureCard}>
-        <div className="text--center">
-          <Svg className={styles.featureSvg} role="img" />
+        <div className={styles.iconContainer}>
+          <span className={styles.featureIcon}>{icon}</span>
         </div>
         <div className="text--center padding-horiz--md">
-          <Heading as="h3">{title}</Heading>
-          <p>{description}</p>
+          <Heading as="h3" className={styles.featureTitle}>{title}</Heading>
+          <p className={styles.featureDescription}>{description}</p>
         </div>
       </div>
     </div>

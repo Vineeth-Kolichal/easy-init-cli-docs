@@ -4,20 +4,46 @@
  */
 
 .heroBanner {
-  padding: 6rem 0;
+  padding: 8rem 0 6rem;
   text-align: center;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, var(--ifm-color-primary-dark) 0%, var(--ifm-color-primary-darkest) 100%);
+  background: linear-gradient(135deg, 
+    var(--ifm-color-primary-darker) 0%, 
+    var(--ifm-color-primary-dark) 50%, 
+    var(--ifm-color-primary-darkest) 100%);
   color: #fff;
 }
 
+.heroBanner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
 .heroLogo {
-  max-width: 250px;
+  max-width: 280px;
   width: 100%;
   height: auto;
   margin-bottom: 24px;
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .heroLogoContainer {
@@ -25,6 +51,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  position: relative;
 }
 
 .hero__title {
@@ -36,13 +63,28 @@
 .hero__subtitle {
   font-size: 1.5rem;
   font-weight: 400;
-  margin-bottom: 32px;
-  opacity: 0.9;
+  margin-bottom: 40px;
+  opacity: 0.95;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding: 2rem;
+    padding: 4rem 2rem;
+  }
+  
+  .hero__title {
+    font-size: 2.5rem;
+  }
+  
+  .hero__subtitle {
+    font-size: 1.25rem;
+  }
+  
+  .heroLogo {
+    max-width: 200px;
   }
 }
 
@@ -50,4 +92,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
+}
+
+.buttons .button {
+  font-weight: 600;
+  padding: 0.875rem 2rem;
+  font-size: 1.125rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.buttons .button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }

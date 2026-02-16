@@ -72,7 +72,9 @@ const config = {
       // Replace with your project's social card
       image: 'img/logo.png',
       colorMode: {
-        respectPrefersColorScheme: true,
+        defaultMode: 'light',
+        disableSwitch: false,
+        respectPrefersColorScheme: false,
       },
       navbar: {
         title: 'Easy Init CLI',

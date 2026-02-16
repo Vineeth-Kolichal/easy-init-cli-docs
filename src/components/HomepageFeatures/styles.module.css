@@ -3,39 +3,119 @@
   align-items: center;
   padding: 4rem 0;
   width: 100%;
+  background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.02) 100%);
 }
 
-/* We need to target the individual feature columns to make them look like cards.
-   Since the markup structure is handled in JS (using col--4), we can assume 
-   the children of the row in index.js are the features. 
-   However, styling the module directly is safer if we wrap the Feature content.
-   Let's check index.js structure first. Ideally we add a class to the div inside Col. */
-
-.featureSvg {
-  height: 200px;
-  width: 200px;
+[data-theme='dark'] .features {
+  background: linear-gradient(180deg, transparent 0%, rgba(255, 255, 255, 0.02) 100%);
 }
 
 .featureCard {
   background: var(--ifm-card-background-color);
-  border-radius: 12px;
-  padding: 2rem;
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
   height: 100%;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
 }
 
 [data-theme='light'] .featureCard {
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
 }
 
 [data-theme='dark'] .featureCard {
-  background: rgba(255, 255, 255, 0.05);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.featureCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.featureCard:hover::before {
+  opacity: 1;
 }
 
 .featureCard:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px) scale(1.02);
   border-color: var(--ifm-color-primary);
 }
+
+[data-theme='light'] .featureCard:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+[data-theme='dark'] .featureCard:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.featureIcon {
+  font-size: 4rem;
+  line-height: 1;
+  display: inline-block;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.featureCard:hover .featureIcon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.featureTitle {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ifm-heading-color);
+}
+
+.featureDescription {
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+[data-theme='dark'] .featureDescription {
+  color: var(--ifm-color-emphasis-600);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 996px) {
+  .features {
+    padding: 3rem 0;
+  }
+  
+  .featureCard {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .featureIcon {
+    font-size: 3rem;
+  }
+  
+  .featureCard {
+    padding: 2rem 1.5rem;
+  }
+}
+
